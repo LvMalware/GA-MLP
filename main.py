@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+# Author: Lucas V. Araujo <lucas.vieira.ar@disroot.org>
+
 import numpy as np
 
 from GA import GA
