@@ -52,7 +52,7 @@ class GA:
             self.next_generation()
             print(f"Best: {self.population[0]}")
             if min_err is not None and best <= min_err:
-                print("Early stop at generation {gen} because the desired error was reached")
+                print(f"Early stop at generation {gen} because the desired error was reached")
                 break
             if self.population[0].fitness() == best:
                 count += 1
