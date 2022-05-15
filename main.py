@@ -19,6 +19,7 @@ data = [X, Y]
 ga = GA((ninput, noutput, data, hlayers), 1000, 500, 150, 0.5, 0.8)
 mlp = ga.evolve(200, 0.001)
 
-print("Target:\n", Y)
-print("Predict:\n", np.round(mlp.classify(data)))
+pred = np.round(mlp.classify(data))
+accuracy = 100 * sum([1 if a == b else 0 for a, b in zip(pred, Y)])/ len(Y)
+print(f"Accuracy for trainning data: {accuracy}%")
 
