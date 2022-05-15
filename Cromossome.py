@@ -76,10 +76,10 @@ class Cromossome():
             w[layer][i][j] = second.weights[layer][i][j]
 
         a = Cromossome(self.ninput, self.noutput, self.data, self.hlayers, w, first.bias)
-        b = Cromossome(self.ninput, self.noutput, self.data, self.hlayers, w, second.bias)
+        #b = Cromossome(self.ninput, self.noutput, self.data, self.hlayers, w, second.bias)
 
         if random() < mutation:
             a.mutate()
-            b.mutate()
+            #b.mutate()
 
-        return a if a < b else b
+        return a #if a < b else b
