@@ -12,7 +12,7 @@ hlayers = (32,)
 
 n = 10
 X = np.random.normal(0.1, 1.0, size=(n, ninput))
-Y = np.abs(np.round(np.random.normal(0, 1, size=(n, noutput))))
+Y = np.random.choice((0.0, 1.0), size=(n, noutput))
 
 data = [X, Y]
 
